@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1C1917"/>
+      <stop offset="100%" stop-color="#0C0A09"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#881337" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#4C1D95" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#1C1917" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Gradient overlay -->
+  <rect width="700" height="700" x="-100" y="-100" fill="url(#glow)"/>
+
+  <!-- V mark -->
+  <path d="M80 180 L130 300 L180 180" stroke="white" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.9"/>
+
+  <!-- Wordmark -->
+  <text x="80" y="390" font-family="Georgia, serif" font-size="108" font-weight="700" fill="white" letter-spacing="-2">VibePath</text>
+
+  <!-- Tagline -->
+  <text x="80" y="460" font-family="Georgia, serif" font-size="36" fill="white" opacity="0.5" letter-spacing="0.5">Stop overthinking your future. Start feeling it.</text>
+
+  <!-- Sub-note -->
+  <text x="80" y="540" font-family="-apple-system, sans-serif" font-size="24" fill="white" opacity="0.25" letter-spacing="3">A 7-QUESTION VISUAL GUT-CHECK</text>
+</svg>

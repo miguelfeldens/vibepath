@@ -1,0 +1,982 @@
+{
+  "q1_Social_Good": [
+    {
+      "id": "ZPA2iICRetk",
+      "url": "https://images.unsplash.com/photo-1759663783558-fa350d7a6734?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHw1fHxzdHJlZXQlMjBtYXJrZXQlMjBjb21tdW5pdHl8ZW58MHwwfHx8MTc3MzM2NDEyN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "Crowded market with vendors selling produce and goods.",
+      "tags": {
+        "E": "Social",
+        "I": "Social_Good",
+        "S": "Communicative"
+      },
+      "pool": "Social_Good"
+    },
+    {
+      "id": "RGsP-cvyIoI",
+      "url": "https://images.unsplash.com/photo-1766847867988-adb37126e36d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHw0fHxzdHJlZXQlMjBtYXJrZXQlMjBjb21tdW5pdHl8ZW58MHwwfHx8MTc3MzM2NDEyN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "People browsing stalls at a night market",
+      "tags": {
+        "E": "Social",
+        "I": "Social_Good",
+        "S": "Communicative"
+      },
+      "pool": "Social_Good"
+    }
+  ],
+  "q1_Innovation": [
+    {
+      "id": "4C22PfVlhdw",
+      "url": "https://images.unsplash.com/photo-1562664348-2188b99b5157?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwyfHxvZmZpY2UlMjBjb3dvcmtpbmclMjBpbnRlcmlvcnxlbnwwfDB8fHwxNzczMzY0MTI4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "person using laptop computer",
+      "tags": {
+        "E": "Urban",
+        "I": "Innovation",
+        "S": "Technical"
+      },
+      "pool": "Innovation"
+    },
+    {
+      "id": "o-PlDCB8sQA",
+      "url": "https://images.unsplash.com/photo-1653463173471-a8230f38b3f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwxfHxvZmZpY2UlMjBjb3dvcmtpbmclMjBpbnRlcmlvcnxlbnwwfDB8fHwxNzczMzY0MTI4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "a white wall with some plants on top of it",
+      "tags": {
+        "E": "Urban",
+        "I": "Innovation",
+        "S": "Technical"
+      },
+      "pool": "Innovation"
+    }
+  ],
+  "q1_Infrastructure": [
+    {
+      "id": "z989gy_INis",
+      "url": "https://images.unsplash.com/photo-1715695938607-0427582503cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjBzaXRlJTIwY3JhbmV8ZW58MHwwfHx8MTc3MzM2NDEyOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "a bunch of cranes that are next to a building",
+      "tags": {
+        "E": "Remote",
+        "I": "Infrastructure",
+        "S": "Physical"
+      },
+      "pool": "Infrastructure"
+    },
+    {
+      "id": "n6IhU72ohHU",
+      "url": "https://images.unsplash.com/photo-1715695938489-d9597f324a73?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwyfHxjb25zdHJ1Y3Rpb24lMjBzaXRlJTIwY3JhbmV8ZW58MHwwfHx8MTc3MzM2NDEyOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "a crane that is standing in the air",
+      "tags": {
+        "E": "Remote",
+        "I": "Infrastructure",
+        "S": "Physical"
+      },
+      "pool": "Infrastructure"
+    }
+  ],
+  "q1_Artistic": [
+    {
+      "id": "PmF9EcHvFB0",
+      "url": "https://images.unsplash.com/photo-1735605917461-4c1b77a6616f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwxfHxhcnQlMjBnYWxsZXJ5JTIwaW50ZXJpb3J8ZW58MHwwfHx8MTc3MzM2NDEyOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "A room with a lot of paintings on the walls",
+      "tags": {
+        "E": "Workshop",
+        "I": "Artistic",
+        "S": "Creative"
+      },
+      "pool": "Artistic"
+    },
+    {
+      "id": "60NH1NVEeC4",
+      "url": "https://images.unsplash.com/photo-1735605918310-73ad27a5dd6b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHw1fHxhcnQlMjBnYWxsZXJ5JTIwaW50ZXJpb3J8ZW58MHwwfHx8MTc3MzM2NDEyOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "A room filled with lots of paintings and a skylight",
+      "tags": {
+        "E": "Workshop",
+        "I": "Artistic",
+        "S": "Creative"
+      },
+      "pool": "Artistic"
+    }
+  ],
+  "q1_Investigation": [
+    {
+      "id": "GxCLXVWAJMY",
+      "url": "https://images.unsplash.com/photo-1709924168698-620ea32c3488?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwyfHxsaWJyYXJ5JTIwYm9va3MlMjBzaGVsdmVzfGVufDB8MHx8fDE3NzMzNjQxMjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "a long row of bookshelves filled with lots of books",
+      "tags": {
+        "E": "Lab",
+        "I": "Investigation",
+        "S": "Analytical"
+      },
+      "pool": "Investigation"
+    },
+    {
+      "id": "tY7hL5Bu7Ic",
+      "url": "https://images.unsplash.com/photo-1648061557966-8e30f972f0be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHw1fHxsaWJyYXJ5JTIwYm9va3MlMjBzaGVsdmVzfGVufDB8MHx8fDE3NzMzNjQxMjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "a bookshelf filled with lots of books in a room",
+      "tags": {
+        "E": "Lab",
+        "I": "Investigation",
+        "S": "Analytical"
+      },
+      "pool": "Investigation"
+    }
+  ],
+  "q2_Social_Good": [
+    {
+      "id": "14jNrPntbgk",
+      "url": "https://images.unsplash.com/photo-1758270704925-fa59d93119c1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwyfHx0ZWFjaGVyJTIwY2xhc3Nyb29tJTIwc3R1ZGVudHN8ZW58MHwwfHx8MTc3MzM2NDEzMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "Teacher lecturing students in a classroom setting.",
+      "tags": {
+        "E": "Social",
+        "I": "Social_Good",
+        "S": "Communicative"
+      },
+      "pool": "Social_Good"
+    },
+    {
+      "id": "QiIxg_q2vh0",
+      "url": "https://images.unsplash.com/photo-1557734864-c78b6dfef1b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwzfHx0ZWFjaGVyJTIwY2xhc3Nyb29tJTIwc3R1ZGVudHN8ZW58MHwwfHx8MTc3MzM2NDEzMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "men and women gathered around a table",
+      "tags": {
+        "E": "Social",
+        "I": "Social_Good",
+        "S": "Communicative"
+      },
+      "pool": "Social_Good"
+    }
+  ],
+  "q2_Innovation": [
+    {
+      "id": "f77Bh3inUpE",
+      "url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwxfHxwcm9ncmFtbWVyJTIwbGFwdG9wJTIwY29kZXxlbnwwfDB8fHwxNzczMzY0MTMxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "turned-on MacBook Pro wit programming codes display",
+      "tags": {
+        "E": "Urban",
+        "I": "Innovation",
+        "S": "Technical"
+      },
+      "pool": "Innovation"
+    }
+  ],
+  "q2_Infrastructure": [
+    {
+      "id": "qCmbTEsdvOw",
+      "url": "https://images.unsplash.com/photo-1769152683420-f4eff91cb30b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwxfHxlbmdpbmVlciUyMGJsdWVwcmludCUyMGhhcmRoYXR8ZW58MHwwfHx8MTc3MzM2NDEzMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "Metal components resting on engineering blueprints.",
+      "tags": {
+        "E": "Workshop",
+        "I": "Infrastructure",
+        "S": "Physical"
+      },
+      "pool": "Infrastructure"
+    },
+    {
+      "id": "SRqJ3eli-4I",
+      "url": "https://images.unsplash.com/photo-1769147339214-076740872485?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwzfHxlbmdpbmVlciUyMGJsdWVwcmludCUyMGhhcmRoYXR8ZW58MHwwfHx8MTc3MzM2NDEzMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "Two metal mechanical parts on engineering blueprints",
+      "tags": {
+        "E": "Workshop",
+        "I": "Infrastructure",
+        "S": "Physical"
+      },
+      "pool": "Infrastructure"
+    }
+  ],
+  "q2_Artistic": [
+    {
+      "id": "uI1grRwHnjg",
+      "url": "https://images.unsplash.com/photo-1752649935428-d88487abc878?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwyfHxwYWludGVyJTIwc3R1ZGlvJTIwY2FudmFzfGVufDB8MHx8fDE3NzMzNjQxMzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "An artist paints a floral picture.",
+      "tags": {
+        "E": "Workshop",
+        "I": "Artistic",
+        "S": "Creative"
+      },
+      "pool": "Artistic"
+    },
+    {
+      "id": "coZ2i9LblM8",
+      "url": "https://images.unsplash.com/photo-1570386230314-9fe8204c6f80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwxfHxwYWludGVyJTIwc3R1ZGlvJTIwY2FudmFzfGVufDB8MHx8fDE3NzMzNjQxMzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "landscape photography of painting mediums on workbench",
+      "tags": {
+        "E": "Workshop",
+        "I": "Artistic",
+        "S": "Creative"
+      },
+      "pool": "Artistic"
+    }
+  ],
+  "q2_Investigation": [
+    {
+      "id": "SyUrj2dO_H0",
+      "url": "https://images.unsplash.com/photo-1707944746033-0232ca340fc6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwyfHxzY2llbnRpc3QlMjBtaWNyb3Njb3BlJTIwbGFifGVufDB8MHx8fDE3NzMzNjQxMzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "a woman in a lab coat looking through a microscope",
+      "tags": {
+        "E": "Lab",
+        "I": "Investigation",
+        "S": "Analytical"
+      },
+      "pool": "Investigation"
+    },
+    {
+      "id": "bD-L7NdGQJo",
+      "url": "https://images.unsplash.com/photo-1707944746508-f2dd7b88ac1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwzfHxzY2llbnRpc3QlMjBtaWNyb3Njb3BlJTIwbGFifGVufDB8MHx8fDE3NzMzNjQxMzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "a man in white lab coat looking through a microscope",
+      "tags": {
+        "E": "Lab",
+        "I": "Investigation",
+        "S": "Analytical"
+      },
+      "pool": "Investigation"
+    }
+  ],
+  "q3_Social_Good": [
+    {
+      "id": "N8Z8s3n3qBk",
+      "url": "https://images.unsplash.com/photo-1736066330610-c102cab4e942?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHw0fHxjbGFzc3Jvb20lMjBzY2hvb2wlMjBpbnRlcmlvcnxlbnwwfDB8fHwxNzczMzY0MTM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "A group of people sitting in front of a blackboard",
+      "tags": {
+        "E": "Social",
+        "I": "Social_Good",
+        "S": "Communicative"
+      },
+      "pool": "Social_Good"
+    },
+    {
+      "id": "7ebCN7FwH3g",
+      "url": "https://images.unsplash.com/photo-1764720572930-eb63afd14b06?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwyfHxjbGFzc3Jvb20lMjBzY2hvb2wlMjBpbnRlcmlvcnxlbnwwfDB8fHwxNzczMzY0MTM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "Students in uniform using phones in classroom.",
+      "tags": {
+        "E": "Social",
+        "I": "Social_Good",
+        "S": "Communicative"
+      },
+      "pool": "Social_Good"
+    }
+  ],
+  "q3_Innovation": [
+    {
+      "id": "yvB-g4g8Uj8",
+      "url": "https://images.unsplash.com/photo-1624948384140-e48e47087fad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwxfHxzdGFydHVwJTIwb2ZmaWNlJTIwY29tcHV0ZXJzfGVufDB8MHx8fDE3NzMzNjQxMzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "black flat screen tv turned on on white table",
+      "tags": {
+        "E": "Urban",
+        "I": "Innovation",
+        "S": "Technical"
+      },
+      "pool": "Innovation"
+    },
+    {
+      "id": "mXv5uWkmQYg",
+      "url": "https://images.unsplash.com/photo-1632227109886-efce03819b8d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHw0fHxzdGFydHVwJTIwb2ZmaWNlJTIwY29tcHV0ZXJzfGVufDB8MHx8fDE3NzMzNjQxMzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "a computer monitor sitting on top of a wooden desk",
+      "tags": {
+        "E": "Urban",
+        "I": "Innovation",
+        "S": "Technical"
+      },
+      "pool": "Innovation"
+    }
+  ],
+  "q3_Infrastructure": [
+    {
+      "id": "0sWa1CAu_p0",
+      "url": "https://images.unsplash.com/photo-1720180244494-c56d7f57e2b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwzfHxob3NwaXRhbCUyMGludGVyaW9yJTIwY2xpbmljfGVufDB8MHx8fDE3NzMzNjQxMzV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "A close up of a thermometer and a hose",
+      "tags": {
+        "E": "Remote",
+        "I": "Infrastructure",
+        "S": "Physical"
+      },
+      "pool": "Infrastructure"
+    },
+    {
+      "id": "qCNhFjYD1I4",
+      "url": "https://images.unsplash.com/photo-1645026675464-a41ada8ac025?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwxfHxob3NwaXRhbCUyMGludGVyaW9yJTIwY2xpbmljfGVufDB8MHx8fDE3NzMzNjQxMzV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "a couple of people in a kitchen preparing food",
+      "tags": {
+        "E": "Remote",
+        "I": "Infrastructure",
+        "S": "Physical"
+      },
+      "pool": "Infrastructure"
+    }
+  ],
+  "q3_Artistic": [
+    {
+      "id": "lQTf50hbg2Y",
+      "url": "https://images.unsplash.com/photo-1539964604210-db87088e0c2c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwxfHx0aGVhdGVyJTIwc3RhZ2UlMjBhdWRpdG9yaXVtfGVufDB8MHx8fDE3NzM0NDI3NjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "theater interior",
+      "tags": {
+        "E": "Workshop",
+        "I": "Artistic",
+        "S": "Creative"
+      },
+      "pool": "Artistic"
+    },
+    {
+      "id": "j7-T7aAliSg",
+      "url": "https://images.unsplash.com/photo-1759851358346-23ae8c50d31c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwyfHx0aGVhdGVyJTIwc3RhZ2UlMjBhdWRpdG9yaXVtfGVufDB8MHx8fDE3NzM0NDI3NjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "Empty vintage theater with rows of seats",
+      "tags": {
+        "E": "Workshop",
+        "I": "Artistic",
+        "S": "Creative"
+      },
+      "pool": "Artistic"
+    }
+  ],
+  "q3_Investigation": [
+    {
+      "id": "jpv1XVDRWn0",
+      "url": "https://images.unsplash.com/photo-1614934273801-0da56c52b081?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHw0fHxyZXNlYXJjaCUyMGxhYm9yYXRvcnklMjBzY2llbmNlfGVufDB8MHx8fDE3NzM0NDI3NjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "clear glass bottles on white table",
+      "tags": {
+        "E": "Lab",
+        "I": "Investigation",
+        "S": "Analytical"
+      },
+      "pool": "Investigation"
+    },
+    {
+      "id": "fSUNVY7aPEs",
+      "url": "https://images.unsplash.com/photo-1742206594477-15139139c0df?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHw1fHxyZXNlYXJjaCUyMGxhYm9yYXRvcnklMjBzY2llbmNlfGVufDB8MHx8fDE3NzM0NDI3NjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "A young scientist examines through a microscope.",
+      "tags": {
+        "E": "Lab",
+        "I": "Investigation",
+        "S": "Analytical"
+      },
+      "pool": "Investigation"
+    }
+  ],
+  "q4_Social_Good": [
+    {
+      "id": "WE9BNiiu4vI",
+      "url": "https://images.unsplash.com/photo-1695891835429-04bb13f65196?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHw1fHxtZWV0aW5nJTIwZGViYXRlJTIwZGlzY3Vzc2lvbnxlbnwwfDB8fHwxNzczNDQyNzY2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "a close up of a typewriter with a paper on it",
+      "tags": {
+        "E": "Social",
+        "I": "Social_Good",
+        "S": "Communicative"
+      },
+      "pool": "Social_Good"
+    },
+    {
+      "id": "4Pb0Hz_opec",
+      "url": "https://images.unsplash.com/photo-1655472355485-d949925e67bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHw0fHxtZWV0aW5nJTIwZGViYXRlJTIwZGlzY3Vzc2lvbnxlbnwwfDB8fHwxNzczNDQyNzY2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "a group of people sitting around a table",
+      "tags": {
+        "E": "Social",
+        "I": "Social_Good",
+        "S": "Communicative"
+      },
+      "pool": "Social_Good"
+    }
+  ],
+  "q4_Innovation": [
+    {
+      "id": "P6vTp4HUR3M",
+      "url": "https://images.unsplash.com/photo-1752659504452-1736acab1662?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwzfHxicmFpbnN0b3JtJTIwd2hpdGVib2FyZCUyMHRlYW18ZW58MHwwfHx8MTc3MzQ0Mjc2N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "People collaborate on diabetes advocacy designs at a table.",
+      "tags": {
+        "E": "Urban",
+        "I": "Innovation",
+        "S": "Technical"
+      },
+      "pool": "Innovation"
+    },
+    {
+      "id": "pNodosEZ5Oc",
+      "url": "https://images.unsplash.com/photo-1681949270990-cecd4728d2e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwyfHxicmFpbnN0b3JtJTIwd2hpdGVib2FyZCUyMHRlYW18ZW58MHwwfHx8MTc3MzQ0Mjc2N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "a group of women standing around a white board",
+      "tags": {
+        "E": "Urban",
+        "I": "Innovation",
+        "S": "Technical"
+      },
+      "pool": "Innovation"
+    }
+  ],
+  "q4_Infrastructure": [
+    {
+      "id": "-yhJKSnhTB8",
+      "url": "https://images.unsplash.com/photo-1631171992385-784ae02b1acb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHw1fHx3b3JrZXJzJTIwY29uc3RydWN0aW9uJTIwaGFyZGhhdHxlbnwwfDB8fHwxNzczNDQyNzY4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "grayscale photo of man in black jacket and pants standing on building",
+      "tags": {
+        "E": "Remote",
+        "I": "Infrastructure",
+        "S": "Physical"
+      },
+      "pool": "Infrastructure"
+    },
+    {
+      "id": "xW7oEi_6rpo",
+      "url": "https://images.unsplash.com/photo-1763281486056-9fd34c978a7d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwxfHx3b3JrZXJzJTIwY29uc3RydWN0aW9uJTIwaGFyZGhhdHxlbnwwfDB8fHwxNzczNDQyNzY4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "Workers on scaffolding at a construction site.",
+      "tags": {
+        "E": "Remote",
+        "I": "Infrastructure",
+        "S": "Physical"
+      },
+      "pool": "Infrastructure"
+    }
+  ],
+  "q4_Artistic": [
+    {
+      "id": "csTbB4dVRbA",
+      "url": "https://images.unsplash.com/photo-1761145221266-a2c8e49460c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHw1fHxtdXNpY2lhbiUyMHJlaGVhcnNhbCUyMHN0YWdlfGVufDB8MHx8fDE3NzM0NDI3Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "Musician playing electric guitar on stage",
+      "tags": {
+        "E": "Workshop",
+        "I": "Artistic",
+        "S": "Creative"
+      },
+      "pool": "Artistic"
+    },
+    {
+      "id": "h31H2oCMQQo",
+      "url": "https://images.unsplash.com/photo-1770101516721-bc6b96af7db3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwxfHxtdXNpY2lhbiUyMHJlaGVhcnNhbCUyMHN0YWdlfGVufDB8MHx8fDE3NzM0NDI3Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "Musicians playing instruments on stage during rehearsal.",
+      "tags": {
+        "E": "Workshop",
+        "I": "Artistic",
+        "S": "Creative"
+      },
+      "pool": "Artistic"
+    }
+  ],
+  "q4_Investigation": [
+    {
+      "id": "-WXQm_NTK0U",
+      "url": "https://images.unsplash.com/photo-1666875753105-c63a6f3bdc86?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwyfHxkYXRhJTIwYW5hbHlzaXMlMjBjaGFydHN8ZW58MHwwfHx8MTc3MzQ0Mjc3MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "graphical user interface",
+      "tags": {
+        "E": "Lab",
+        "I": "Investigation",
+        "S": "Analytical"
+      },
+      "pool": "Investigation"
+    },
+    {
+      "id": "q21XvpB7uQU",
+      "url": "https://images.unsplash.com/photo-1762427354251-f008b64dbc32?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHw1fHxkYXRhJTIwYW5hbHlzaXMlMjBjaGFydHN8ZW58MHwwfHx8MTc3MzQ0Mjc3MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "Bar and pie charts on a document",
+      "tags": {
+        "E": "Lab",
+        "I": "Investigation",
+        "S": "Analytical"
+      },
+      "pool": "Investigation"
+    }
+  ],
+  "q5_Social_Good": [
+    {
+      "id": "6cZGKhz-9sU",
+      "url": "https://images.unsplash.com/photo-1772723246501-b108bc8a4d8e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwyfHxkaXZlcnNlJTIwZnJpZW5kcyUyMGxhdWdoaW5nfGVufDB8MHx8fDE3NzM0NDI3NzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "Three people laughing together against a red background",
+      "tags": {
+        "E": "Social",
+        "I": "Social_Good",
+        "S": "Communicative"
+      },
+      "pool": "Social_Good"
+    },
+    {
+      "id": "IKKaHfoJi3g",
+      "url": "https://images.unsplash.com/photo-1758275557330-cfd545444dc3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwzfHxkaXZlcnNlJTIwZnJpZW5kcyUyMGxhdWdoaW5nfGVufDB8MHx8fDE3NzM0NDI3NzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "Diverse group of friends taking a selfie outdoors",
+      "tags": {
+        "E": "Social",
+        "I": "Social_Good",
+        "S": "Communicative"
+      },
+      "pool": "Social_Good"
+    }
+  ],
+  "q5_Innovation": [
+    {
+      "id": "wrdvOKfgzRo",
+      "url": "https://images.unsplash.com/photo-1630672790237-38eeb57cb60b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHw0fHx0ZWFtJTIwbWVldGluZyUyMG9mZmljZXxlbnwwfDB8fHwxNzczNDQyNzcxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "man in red and black crew neck t-shirt using silver macbook",
+      "tags": {
+        "E": "Urban",
+        "I": "Innovation",
+        "S": "Technical"
+      },
+      "pool": "Innovation"
+    },
+    {
+      "id": "bTkjP6aBmL0",
+      "url": "https://images.unsplash.com/photo-1748346674126-8c0df10f2f61?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwyfHx0ZWFtJTIwbWVldGluZyUyMG9mZmljZXxlbnwwfDB8fHwxNzczNDQyNzcxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "Three people are meeting in a conference room.",
+      "tags": {
+        "E": "Urban",
+        "I": "Innovation",
+        "S": "Technical"
+      },
+      "pool": "Innovation"
+    }
+  ],
+  "q5_Infrastructure": [
+    {
+      "id": "5eiOsDJnlE4",
+      "url": "https://images.unsplash.com/photo-1772852309223-9ebeecf3ebf8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwxfHx3b3JrZXJzJTIwY3JldyUyMGNvbnN0cnVjdGlvbnxlbnwwfDB8fHwxNzczNDQyNzcxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "Yellow dump truck unloading dirt onto a street.",
+      "tags": {
+        "E": "Workshop",
+        "I": "Infrastructure",
+        "S": "Physical"
+      },
+      "pool": "Infrastructure"
+    },
+    {
+      "id": "jTukETRir_s",
+      "url": "https://images.unsplash.com/photo-1763973137261-f6c67c5d3051?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHw0fHx3b3JrZXJzJTIwY3JldyUyMGNvbnN0cnVjdGlvbnxlbnwwfDB8fHwxNzczNDQyNzcxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "Workers in hard hats and vests walk down a street.",
+      "tags": {
+        "E": "Workshop",
+        "I": "Infrastructure",
+        "S": "Physical"
+      },
+      "pool": "Infrastructure"
+    }
+  ],
+  "q5_Artistic": [
+    {
+      "id": "NHIbzGS9LYY",
+      "url": "https://images.unsplash.com/photo-1763244737837-fdef959467c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwxfHxtdXNpY2lhbnMlMjBiYW5kJTIwc3R1ZGlvfGVufDB8MHx8fDE3NzM0NDI3NzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "Blurred group with motorcycle in studio setting",
+      "tags": {
+        "E": "Workshop",
+        "I": "Artistic",
+        "S": "Creative"
+      },
+      "pool": "Artistic"
+    },
+    {
+      "id": "tVXB2fLvnWo",
+      "url": "https://images.unsplash.com/photo-1707073220898-9e86a9ad5eff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHw0fHxtdXNpY2lhbnMlMjBiYW5kJTIwc3R1ZGlvfGVufDB8MHx8fDE3NzM0NDI3NzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "a room with a lot of musical equipment on the floor",
+      "tags": {
+        "E": "Workshop",
+        "I": "Artistic",
+        "S": "Creative"
+      },
+      "pool": "Artistic"
+    }
+  ],
+  "q5_Investigation": [
+    {
+      "id": "-X4Qx4_4iMU",
+      "url": "https://images.unsplash.com/photo-1758270705518-b61b40527e76?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHw0fHxzdHVkZW50cyUyMHN0dWR5JTIwZ3JvdXB8ZW58MHwwfHx8MTc3MzQ0Mjc3M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "Diverse group of students collaborating around a laptop.",
+      "tags": {
+        "E": "Lab",
+        "I": "Investigation",
+        "S": "Analytical"
+      },
+      "pool": "Investigation"
+    },
+    {
+      "id": "qgmH9BgGKGQ",
+      "url": "https://images.unsplash.com/photo-1743329557386-d761e3134d91?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHw1fHxzdHVkZW50cyUyMHN0dWR5JTIwZ3JvdXB8ZW58MHwwfHx8MTc3MzQ0Mjc3M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "A class group photo is posing in their uniforms.",
+      "tags": {
+        "E": "Lab",
+        "I": "Investigation",
+        "S": "Analytical"
+      },
+      "pool": "Investigation"
+    }
+  ],
+  "q6_Social_Good": [
+    {
+      "id": "H2pHwYAO-Uk",
+      "url": "https://images.unsplash.com/photo-1767647983856-d5fd4b8ce755?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwyfHxncmFkdWF0aW9uJTIwY2VyZW1vbnklMjBkaXBsb21hfGVufDB8MHx8fDE3NzM0NDI3NzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "Man in graduation gown holding diploma outside",
+      "tags": {
+        "E": "Social",
+        "I": "Social_Good",
+        "S": "Communicative"
+      },
+      "pool": "Social_Good"
+    },
+    {
+      "id": "ds29I447q_Y",
+      "url": "https://images.unsplash.com/photo-1759130020658-9af3acb430ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHw1fHxncmFkdWF0aW9uJTIwY2VyZW1vbnklMjBkaXBsb21hfGVufDB8MHx8fDE3NzM0NDI3NzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "Graduating student looking towards the sun",
+      "tags": {
+        "E": "Social",
+        "I": "Social_Good",
+        "S": "Communicative"
+      },
+      "pool": "Social_Good"
+    }
+  ],
+  "q6_Innovation": [
+    {
+      "id": "ljG-4b5OXIM",
+      "url": "https://images.unsplash.com/photo-1758691737492-48e8fdd336f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwyfHx0ZWFtJTIwY2VsZWJyYXRpbmclMjBzdWNjZXNzfGVufDB8MHx8fDE3NzM0NDI3NzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "Diverse group of colleagues celebrating success in office",
+      "tags": {
+        "E": "Urban",
+        "I": "Innovation",
+        "S": "Technical"
+      },
+      "pool": "Innovation"
+    },
+    {
+      "id": "8N0oIGSSNcU",
+      "url": "https://images.unsplash.com/photo-1752650735509-58f11eaa2e10?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHw0fHx0ZWFtJTIwY2VsZWJyYXRpbmclMjBzdWNjZXNzfGVufDB8MHx8fDE3NzM0NDI3NzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "Two women celebrate success with a high five.",
+      "tags": {
+        "E": "Urban",
+        "I": "Innovation",
+        "S": "Technical"
+      },
+      "pool": "Innovation"
+    }
+  ],
+  "q6_Infrastructure": [
+    {
+      "id": "WCt4pMJT2dQ",
+      "url": "https://images.unsplash.com/photo-1761780974301-dc527320e448?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwzfHxicmlkZ2UlMjBhcmNoaXRlY3R1cmUlMjBsYW5kbWFya3xlbnwwfDB8fHwxNzczNDQyNzc0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "Tower bridge in london under a cloudy sky",
+      "tags": {
+        "E": "Remote",
+        "I": "Infrastructure",
+        "S": "Physical"
+      },
+      "pool": "Infrastructure"
+    },
+    {
+      "id": "o8pR2dQr9L0",
+      "url": "https://images.unsplash.com/photo-1699539517781-619d3e497752?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwxfHxicmlkZ2UlMjBhcmNoaXRlY3R1cmUlMjBsYW5kbWFya3xlbnwwfDB8fHwxNzczNDQyNzc0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "a bridge over a river with a city in the background",
+      "tags": {
+        "E": "Remote",
+        "I": "Infrastructure",
+        "S": "Physical"
+      },
+      "pool": "Infrastructure"
+    }
+  ],
+  "q6_Artistic": [
+    {
+      "id": "M33HY0ANVHw",
+      "url": "https://images.unsplash.com/photo-1583257984061-135437bac7c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHw0fHxjb25jZXJ0JTIwcGVyZm9ybWVyJTIwY3Jvd2R8ZW58MHwwfHx8MTc3MzQ0Mjc3NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "man in black shirt playing guitar on stage",
+      "tags": {
+        "E": "Workshop",
+        "I": "Artistic",
+        "S": "Creative"
+      },
+      "pool": "Artistic"
+    },
+    {
+      "id": "8s5axP-uUYE",
+      "url": "https://images.unsplash.com/photo-1579883238462-2c9025486ef3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwxfHxjb25jZXJ0JTIwcGVyZm9ybWVyJTIwY3Jvd2R8ZW58MHwwfHx8MTc3MzQ0Mjc3NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "man playing guitar on stage",
+      "tags": {
+        "E": "Workshop",
+        "I": "Artistic",
+        "S": "Creative"
+      },
+      "pool": "Artistic"
+    }
+  ],
+  "q6_Investigation": [
+    {
+      "id": "XLQuTdktpa8",
+      "url": "https://images.unsplash.com/photo-1766297247924-6638d54e7c89?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHw1fHxzY2llbnRpc3QlMjBkaXNjb3ZlcnklMjByZXNlYXJjaHxlbnwwfDB8fHwxNzczNDQyNzc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "Two scientists working on computers in a laboratory.",
+      "tags": {
+        "E": "Lab",
+        "I": "Investigation",
+        "S": "Analytical"
+      },
+      "pool": "Investigation"
+    },
+    {
+      "id": "JqfxntbYPms",
+      "url": "https://images.unsplash.com/photo-1758206523826-a65d4cf070aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwyfHxzY2llbnRpc3QlMjBkaXNjb3ZlcnklMjByZXNlYXJjaHxlbnwwfDB8fHwxNzczNDQyNzc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "Scientist looks through a microscope in a laboratory.",
+      "tags": {
+        "E": "Lab",
+        "I": "Investigation",
+        "S": "Analytical"
+      },
+      "pool": "Investigation"
+    }
+  ],
+  "q7_Social_Good": [
+    {
+      "id": "FiueBJoaKc8",
+      "url": "https://images.unsplash.com/photo-1677126369481-81b4ddcf0e72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwyfHxjaXR5JTIwc3RyZWV0JTIwbmVpZ2hib3Job29kfGVufDB8MHx8fDE3NzM0NDI3NzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "a street lined with houses with mountains in the background",
+      "tags": {
+        "E": "Social",
+        "I": "Social_Good",
+        "S": "Communicative"
+      },
+      "pool": "Social_Good"
+    },
+    {
+      "id": "gAaW6QcUoOE",
+      "url": "https://images.unsplash.com/photo-1769940337791-21e135071c14?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHw1fHxjaXR5JTIwc3RyZWV0JTIwbmVpZ2hib3Job29kfGVufDB8MHx8fDE3NzM0NDI3NzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "Two people walk up a steep city street.",
+      "tags": {
+        "E": "Social",
+        "I": "Social_Good",
+        "S": "Communicative"
+      },
+      "pool": "Social_Good"
+    }
+  ],
+  "q7_Innovation": [
+    {
+      "id": "T7VKv5DUH5w",
+      "url": "https://images.unsplash.com/photo-1767150145058-367fb68021f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwxfHxjaXR5JTIwc2t5bGluZSUyMG1vZGVybiUyMG9mZmljZXxlbnwwfDB8fHwxNzczNDQyNzc3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "Modern cityscape with tall buildings at sunset.",
+      "tags": {
+        "E": "Urban",
+        "I": "Innovation",
+        "S": "Technical"
+      },
+      "pool": "Innovation"
+    },
+    {
+      "id": "3Si_buQHhYs",
+      "url": "https://images.unsplash.com/photo-1726533765275-a69cfd7f9897?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwyfHxjaXR5JTIwc2t5bGluZSUyMG1vZGVybiUyMG9mZmljZXxlbnwwfDB8fHwxNzczNDQyNzc3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "A view of a city from across the water",
+      "tags": {
+        "E": "Urban",
+        "I": "Innovation",
+        "S": "Technical"
+      },
+      "pool": "Innovation"
+    }
+  ],
+  "q7_Artistic": [
+    {
+      "id": "UjW2I2ClOqo",
+      "url": "https://images.unsplash.com/photo-1763934385931-8888d883fe3c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHw1fHxzdHJlZXQlMjBhcnQlMjBtdXJhbHMlMjBjb2xvcmZ1bHxlbnwwfDB8fHwxNzczNDQyNzc4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "Colorful mosaic mural depicting people and animals",
+      "tags": {
+        "E": "Workshop",
+        "I": "Artistic",
+        "S": "Creative"
+      },
+      "pool": "Artistic"
+    },
+    {
+      "id": "ZbwF240MM-Y",
+      "url": "https://images.unsplash.com/photo-1590968802291-f1e1f86cde34?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwxfHxzdHJlZXQlMjBhcnQlMjBtdXJhbHMlMjBjb2xvcmZ1bHxlbnwwfDB8fHwxNzczNDQyNzc4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "blue red and yellow graffiti art",
+      "tags": {
+        "E": "Workshop",
+        "I": "Artistic",
+        "S": "Creative"
+      },
+      "pool": "Artistic"
+    }
+  ],
+  "q7_Investigation": [
+    {
+      "id": "q4Ilmi9OhGc",
+      "url": "https://images.unsplash.com/photo-1706078357667-f6eb0184d27a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHw1fHx1bml2ZXJzaXR5JTIwY2FtcHVzJTIwYnVpbGRpbmdzfGVufDB8MHx8fDE3NzM0NDI3Nzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "a large building with stairs leading up to it",
+      "tags": {
+        "E": "Lab",
+        "I": "Investigation",
+        "S": "Analytical"
+      },
+      "pool": "Investigation"
+    },
+    {
+      "id": "vcSEVHKAbKQ",
+      "url": "https://images.unsplash.com/photo-1706078358756-1f342bedf97c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwzfHx1bml2ZXJzaXR5JTIwY2FtcHVzJTIwYnVpbGRpbmdzfGVufDB8MHx8fDE3NzM0NDI3Nzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "a very tall building sitting next to a lush green park",
+      "tags": {
+        "E": "Lab",
+        "I": "Investigation",
+        "S": "Analytical"
+      },
+      "pool": "Investigation"
+    }
+  ],
+  "branch_Social_Good": [
+    {
+      "id": "jgRfl2R4mUs",
+      "url": "https://images.unsplash.com/photo-1758599668299-beebedfabf7b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHw0fHxjb21tdW5pdHklMjB2b2x1bnRlZXJpbmclMjBwZW9wbGV8ZW58MHwwfHx8MTc3MzQ0Mjc3OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "Volunteers cleaning up a forest with blue trash bags.",
+      "tags": {
+        "E": "Social",
+        "I": "Social_Good",
+        "S": "Communicative"
+      },
+      "pool": "Social_Good"
+    },
+    {
+      "id": "nOtwXctzCjo",
+      "url": "https://images.unsplash.com/photo-1769837231004-497d93ae155c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwyfHxjb21tdW5pdHklMjB2b2x1bnRlZXJpbmclMjBwZW9wbGV8ZW58MHwwfHx8MTc3MzQ0Mjc3OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "People gathered at a blue rotary club outdoor event.",
+      "tags": {
+        "E": "Social",
+        "I": "Social_Good",
+        "S": "Communicative"
+      },
+      "pool": "Social_Good"
+    },
+    {
+      "id": "mBzvStf9-H8",
+      "url": "https://images.unsplash.com/photo-1761666508658-381c63e409fb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwxfHxjb21tdW5pdHklMjB2b2x1bnRlZXJpbmclMjBwZW9wbGV8ZW58MHwwfHx8MTc3MzQ0Mjc3OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "People wading in the ocean with waves breaking.",
+      "tags": {
+        "E": "Social",
+        "I": "Social_Good",
+        "S": "Communicative"
+      },
+      "pool": "Social_Good"
+    }
+  ],
+  "branch_Innovation": [
+    {
+      "id": "7FiieOuoBTU",
+      "url": "https://images.unsplash.com/photo-1707075891545-41b982930351?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwyfHx0ZWNobm9sb2d5JTIwZGlnaXRhbCUyMGZ1dHVyZXxlbnwwfDB8fHwxNzczNDQyNzgwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "a bit coin sitting on top of a pile of coins",
+      "tags": {
+        "E": "Urban",
+        "I": "Innovation",
+        "S": "Technical"
+      },
+      "pool": "Innovation"
+    },
+    {
+      "id": "QpEtEO9_Ots",
+      "url": "https://images.unsplash.com/photo-1720962158858-5fb16991d2b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHw1fHx0ZWNobm9sb2d5JTIwZGlnaXRhbCUyMGZ1dHVyZXxlbnwwfDB8fHwxNzczNDQyNzgwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "A close up of an electronic device with sound waves",
+      "tags": {
+        "E": "Urban",
+        "I": "Innovation",
+        "S": "Technical"
+      },
+      "pool": "Innovation"
+    },
+    {
+      "id": "Wa-3T6d0rBo",
+      "url": "https://images.unsplash.com/photo-1689443111130-6e9c7dfd8f9e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwzfHx0ZWNobm9sb2d5JTIwZGlnaXRhbCUyMGZ1dHVyZXxlbnwwfDB8fHwxNzczNDQyNzgwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "a dark background with a purple geometric design",
+      "tags": {
+        "E": "Urban",
+        "I": "Innovation",
+        "S": "Technical"
+      },
+      "pool": "Innovation"
+    }
+  ],
+  "branch_Infrastructure": [
+    {
+      "id": "Lct-6SF7VGQ",
+      "url": "https://images.unsplash.com/photo-1706720064191-87c0c4473e57?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwyfHxicmlkZ2UlMjBzdGVlbCUyMGFyY2hpdGVjdHVyZXxlbnwwfDB8fHwxNzczNDQyNzgwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "a green train traveling across a bridge over water",
+      "tags": {
+        "E": "Nature",
+        "I": "Infrastructure",
+        "S": "Physical"
+      },
+      "pool": "Infrastructure"
+    },
+    {
+      "id": "dAsqPjfScpk",
+      "url": "https://images.unsplash.com/photo-1627573578940-4e021596c82b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHw0fHxicmlkZ2UlMjBzdGVlbCUyMGFyY2hpdGVjdHVyZXxlbnwwfDB8fHwxNzczNDQyNzgwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "blue metal frame on white wall",
+      "tags": {
+        "E": "Nature",
+        "I": "Infrastructure",
+        "S": "Physical"
+      },
+      "pool": "Infrastructure"
+    },
+    {
+      "id": "7tn6jP6rfhk",
+      "url": "https://images.unsplash.com/photo-1664802448147-e8b64427a78b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwxfHxicmlkZ2UlMjBzdGVlbCUyMGFyY2hpdGVjdHVyZXxlbnwwfDB8fHwxNzczNDQyNzgwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "a close-up of a building",
+      "tags": {
+        "E": "Nature",
+        "I": "Infrastructure",
+        "S": "Physical"
+      },
+      "pool": "Infrastructure"
+    }
+  ],
+  "branch_Artistic": [
+    {
+      "id": "cDNj8rjjgkc",
+      "url": "https://images.unsplash.com/photo-1766185794911-7f50f1df5cbd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwyfHxjcmVhdGl2ZSUyMHN0dWRpbyUyMGRlc2lnbnxlbnwwfDB8fHwxNzczNDQyNzgxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "Woman with abstract black face paint and body paint",
+      "tags": {
+        "E": "Workshop",
+        "I": "Artistic",
+        "S": "Creative"
+      },
+      "pool": "Artistic"
+    },
+    {
+      "id": "ONZXRBUohRY",
+      "url": "https://images.unsplash.com/photo-1764922981561-c2ce524178f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHw1fHxjcmVhdGl2ZSUyMHN0dWRpbyUyMGRlc2lnbnxlbnwwfDB8fHwxNzczNDQyNzgxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "Dark vase with swirling yellow light trails",
+      "tags": {
+        "E": "Workshop",
+        "I": "Artistic",
+        "S": "Creative"
+      },
+      "pool": "Artistic"
+    },
+    {
+      "id": "-De5IOMxxPM",
+      "url": "https://images.unsplash.com/photo-1759150467548-5a97257e583a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMHN0dWRpbyUyMGRlc2lnbnxlbnwwfDB8fHwxNzczNDQyNzgxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "Wooden hand and geometric shapes on beige background",
+      "tags": {
+        "E": "Workshop",
+        "I": "Artistic",
+        "S": "Creative"
+      },
+      "pool": "Artistic"
+    }
+  ],
+  "branch_Investigation": [
+    {
+      "id": "f4jc67ICvzQ",
+      "url": "https://images.unsplash.com/photo-1655814563963-0fe0a7d6c279?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwxfHxsYWJvcmF0b3J5JTIwc2NpZW5jZSUyMHJlc2VhcmNofGVufDB8MHx8fDE3NzM0NDI3ODJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "a woman in a lab coat",
+      "tags": {
+        "E": "Lab",
+        "I": "Investigation",
+        "S": "Analytical"
+      },
+      "pool": "Investigation"
+    },
+    {
+      "id": "M3t3E7gzPKQ",
+      "url": "https://images.unsplash.com/photo-1618053448701-5220304dc9ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHwzfHxsYWJvcmF0b3J5JTIwc2NpZW5jZSUyMHJlc2VhcmNofGVufDB8MHx8fDE3NzM0NDI3ODJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "woman in white long sleeve shirt using white and black sewing machine",
+      "tags": {
+        "E": "Lab",
+        "I": "Investigation",
+        "S": "Analytical"
+      },
+      "pool": "Investigation"
+    },
+    {
+      "id": "gxHT8JuIbgQ",
+      "url": "https://images.unsplash.com/photo-1758573467057-99f26217b2ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTM1OTh8MHwxfHNlYXJjaHw1fHxsYWJvcmF0b3J5JTIwc2NpZW5jZSUyMHJlc2VhcmNofGVufDB8MHx8fDE3NzM0NDI3ODJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "Man working at a microscope in a laboratory.",
+      "tags": {
+        "E": "Lab",
+        "I": "Investigation",
+        "S": "Analytical"
+      },
+      "pool": "Investigation"
+    }
+  ]
+}

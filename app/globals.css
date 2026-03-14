@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0c0a09;
+  --foreground: #fafaf9;
+  --font-playfair: 'Playfair Display', Georgia, serif;
 }
 
 @theme inline {
@@ -12,15 +14,95 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans, system-ui, sans-serif);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Lookbook image aesthetic */
+.lookbook-image {
+  filter: sepia(15%) saturate(115%) brightness(94%) contrast(106%);
+  transition: filter 0.3s ease;
+}
+
+.lookbook-card:hover .lookbook-image {
+  filter: sepia(5%) saturate(120%) brightness(98%) contrast(108%);
+}
+
+/* Hide print-only elements on screen */
+.print-only {
+  display: none;
+}
+
+/* PDF / Print export */
+@media print {
+  /* Reveal print-only elements as their own page */
+  .print-only {
+    display: block !important;
+    page-break-before: always;
+    break-before: page;
+  }
+  /* Preserve background colors and images */
+  * {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  /* Each lookbook section gets its own page */
+  .lookbook-section {
+    page-break-after: always;
+    break-after: page;
+  }
+  .lookbook-section:last-of-type {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  /* Force a new page before this element */
+  .print-page-break {
+    page-break-before: always;
+    break-before: page;
+  }
+
+  /* Hide interactive elements */
+  .no-print {
+    display: none !important;
+  }
+
+  /* Let sections flow naturally for print */
+  html,
+  body {
+    height: auto;
+    overflow: visible;
+  }
+
+  /* Remove max-height constraints on moodboard */
+  [class*='max-h-'] {
+    max-height: none !important;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
 }
