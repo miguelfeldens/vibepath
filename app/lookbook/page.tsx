@@ -92,7 +92,7 @@ export default function LookbookPage() {
             <p className="text-sm text-white/60 leading-relaxed">VibePath is an independent tool built for exploration and self-reflection. It is not affiliated with any college, university, government agency, or professional counseling body.</p>
           </div>
         </div>
-        <p className="mt-16 text-xs text-white/20">vibepath.app · {new Date().getFullYear()}</p>
+        <p className="mt-16 text-xs text-white/20">vibepath.app · {new Date().getFullYear()} · by Miguel Feldens</p>
       </div>
 
       {/* Footer CTA */}
@@ -109,6 +109,11 @@ export default function LookbookPage() {
           </a>
         </div>
       </section>
+
+      {/* Signature */}
+      <div className="px-8 py-6 text-center bg-stone-950 border-t border-white/5">
+        <p className="text-xs text-white/20">by Miguel Feldens</p>
+      </div>
     </main>
   )
 }
