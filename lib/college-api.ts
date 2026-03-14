@@ -119,13 +119,15 @@ function computeFitLevel(
   }
 
   // GPA modifier: strong GPA boosts one tier, weak GPA drops one tier
-  if (gpa !== null && level !== 'unknown') {
+  if (gpa !== null) {
     const order: FitLevel[] = ['ultra-reach', 'reach', 'target', 'safety']
-    const idx = order.indexOf(level)
-    if (gpa >= 3.7 && idx < order.length - 1) {
-      level = order[idx + 1] // boost one tier
-    } else if (gpa < 2.5 && idx > 0) {
-      level = order[idx - 1] // drop one tier
+    const idx = order.indexOf(level) // -1 when level is 'unknown'
+    if (idx !== -1) {
+      if (gpa >= 3.7 && idx < order.length - 1) {
+        level = order[idx + 1] // boost one tier
+      } else if (gpa < 2.5 && idx > 0) {
+        level = order[idx - 1] // drop one tier
+      }
     }
   }
 
