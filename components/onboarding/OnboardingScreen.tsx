@@ -107,6 +107,8 @@ export function OnboardingScreen() {
           <Link href="/terms" className="text-white/25 hover:text-white/50 transition-colors">
             Terms
           </Link>
+          <span className="text-white/15">·</span>
+          <span className="text-white/20">by Miguel Feldens</span>
         </motion.div>
       </motion.div>
     </div>

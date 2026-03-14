@@ -54,6 +54,8 @@ export default function TermsPage() {
         >
           ← Back to VibePath
         </Link>
+
+        <p className="mt-12 text-xs text-white/20">by Miguel Feldens</p>
       </div>
     </div>
   )
