@@ -119,7 +119,7 @@ function computeFitLevel(
   }
 
   // GPA modifier: strong GPA boosts one tier, weak GPA drops one tier
-  if (gpa !== null && level !== 'unknown' && level !== 'ultra-reach') {
+  if (gpa !== null && level !== 'unknown') {
     const order: FitLevel[] = ['ultra-reach', 'reach', 'target', 'safety']
     const idx = order.indexOf(level)
     if (gpa >= 3.7 && idx < order.length - 1) {
