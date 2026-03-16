@@ -16,14 +16,19 @@ export interface QuizImage {
   pool: Impact
 }
 
+export interface CareerDetail {
+  title: string
+  blurb: string
+  bullets: string[]
+}
+
 export interface Persona {
   title: string
   powerWords: [string, string, string]
   coverGradient: string
   accentColor: string
   description: string
-  careers: string[]
-  topCareer: { title: string; blurb: string; bullets: string[] }
+  careers: CareerDetail[]
 }
 
 export interface SessionResult {

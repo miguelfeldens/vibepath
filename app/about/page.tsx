@@ -39,7 +39,7 @@ export default function AboutPage() {
       <div className="max-w-2xl mx-auto px-6 py-16">
 
         {/* Header */}
-        <p className="text-xs tracking-[0.3em] uppercase text-white/30 font-medium mb-6">VibePath</p>
+        <p className="text-xs tracking-[0.3em] uppercase text-white/30 font-medium mb-6">VibePath · <a href="https://vibepath.us" className="hover:text-white/50 transition-colors">vibepath.us</a></p>
         <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight leading-[1.1] mb-4">
           The methodology,<br />
           <span className="text-white/50">no cap.</span>
@@ -61,6 +61,31 @@ export default function AboutPage() {
             <p>
               After the second question, your emerging dominant dimension starts to shape which images appear next. The quiz branches toward you — so by the end, the pattern is clear.
             </p>
+          </div>
+        </section>
+
+        {/* What's in your Lookbook */}
+        <section className="mb-14">
+          <h2 className="text-xs tracking-[0.25em] uppercase text-white/30 font-medium mb-4">What&apos;s in your Lookbook</h2>
+          <div className="space-y-4 text-sm text-white/60 leading-relaxed">
+            <p>
+              After the quiz, you get a personalized <span className="text-white/80">Identity Lookbook</span> — built around your archetype in two levels:
+            </p>
+            <div className="space-y-3 pl-1">
+              {[
+                { label: 'Moodboard', desc: '12 images drawn from your quiz picks + your archetype\'s aesthetic pool, arranged in an editorial grid.' },
+                { label: 'Power Words', desc: 'Three adjectives that capture how you move through the world.' },
+                { label: 'Careers', desc: '15 career paths that fit your archetype — tap any one to read a real "day in the life" snapshot.' },
+                { label: 'Deep Dive', desc: 'A 4-step Ikigai module that bridges your visual identity into a life hypothesis. Rank your top action verbs, pick a global mission and an economic path — the app generates your personal manifesto.' },
+                { label: 'College Finder', desc: 'Search real U.S. colleges by your archetype\'s programs. Filter by state, campus setting, or major — including any field in the College Scorecard database. Each result shows selectivity, return rate, graduation rate, average net price, aid availability, and identity markers (HBCU, women\'s or men\'s college, faith-based).' },
+                { label: 'Journal', desc: 'Every session is saved in your browser for future reference.' },
+              ].map(({ label, desc }) => (
+                <div key={label} className="flex gap-3">
+                  <span className="text-white/80 font-medium shrink-0 w-28">{label}</span>
+                  <span className="text-white/40">— {desc}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -114,6 +139,32 @@ export default function AboutPage() {
           </div>
         </section>
 
+        {/* Ikigai & the Deep Dive */}
+        <section className="mb-14">
+          <h2 className="text-xs tracking-[0.25em] uppercase text-white/30 font-medium mb-4">The Deep Dive — Ikigai</h2>
+          <div className="space-y-4 text-sm text-white/60 leading-relaxed">
+            <p>
+              After the Lookbook, a second module shifts from System 1 (visual/intuitive) to System 2 (reflective/actionable) thinking. It&apos;s built around <span className="text-white/80">Ikigai</span> — a Japanese concept meaning &ldquo;your reason to get up in the morning.&rdquo;
+            </p>
+            <p>
+              The traditional Ikigai framework maps four overlapping circles: what you love, what you&apos;re good at, what the world needs, and what you can be paid for. Their intersection is your purpose.
+            </p>
+            <p>VibePath operationalises this in three steps:</p>
+            <div className="space-y-3 pl-2">
+              {[
+                { label: 'Stack Rank', desc: 'Drag your top 3 action verbs (out of 5 suggested for your archetype) into a priority stack — Top (50%), Middle (30%), Bottom (20%). Add a custom word if none fit.' },
+                { label: 'Mission & Market', desc: 'Pick one global side quest (e.g. Climate Tech, Mental Health) and an economic energy (stable / growth / founder risk). Together these map to the Mission and Vocation circles.' },
+                { label: 'Life Hypothesis', desc: 'A two-sentence manifesto is generated from your ranked verbs, mission, and economic choice — giving you a clear, personalized north star before you search for colleges.' },
+              ].map(({ label, desc }) => (
+                <div key={label} className="flex gap-3">
+                  <span className="text-white/80 font-medium shrink-0 w-28">{label}</span>
+                  <span className="text-white/40">— {desc}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* College fit logic */}
         <section className="mb-14">
           <h2 className="text-xs tracking-[0.25em] uppercase text-white/30 font-medium mb-4">College fit logic</h2>
@@ -125,7 +176,10 @@ export default function AboutPage() {
               No SAT? We fall back to the school&apos;s overall admission rate. GPA adjusts the result one tier up (3.7+) or down (below 2.5).
             </p>
             <p>
-              College data comes from the <span className="text-white/80">U.S. Department of Education&apos;s College Scorecard</span> — a public federal dataset updated annually. Program matching uses the school&apos;s reported bachelor&apos;s degree offerings, filtered for your archetype.
+              College data comes from the <span className="text-white/80">U.S. Department of Education&apos;s College Scorecard</span> — a public federal dataset updated annually. Program matching uses the school&apos;s reported bachelor&apos;s degree offerings, filtered for your archetype or any major you select from the full Scorecard catalog.
+            </p>
+            <p>
+              Each result also surfaces context beyond just admissions: <span className="text-white/80">freshman return rate, graduation rate, average net price after aid, and Pell grant availability</span>. Identity markers (HBCU, women&apos;s college, men&apos;s college, faith-based) appear when available — so you can find a school that fits who you actually are.
             </p>
           </div>
           <div className="mt-5 flex flex-wrap gap-2">
@@ -149,7 +203,7 @@ export default function AboutPage() {
         <section className="mb-16">
           <h2 className="text-xs tracking-[0.25em] uppercase text-white/30 font-medium mb-4">Data &amp; privacy</h2>
           <div className="space-y-3 text-sm text-white/60 leading-relaxed">
-            <p>Your quiz session is saved only in your <span className="text-white/80">browser&apos;s localStorage</span> — so you can revisit your Lookbook later. Nothing is sent to a server. We don&apos;t collect names, emails, or any personal info.</p>
+            <p>Your quiz session is saved only in your <span className="text-white/80">browser&apos;s localStorage</span> — so you can revisit your Lookbook later. We don&apos;t collect names, emails, or any personal info.</p>
             <p>Quiz and moodboard images are served from <span className="text-white/80">Unsplash</span> and <span className="text-white/80">Pexels</span> under their respective free-use licenses.</p>
           </div>
         </section>
@@ -162,7 +216,7 @@ export default function AboutPage() {
           ← Back to VibePath
         </Link>
 
-        <p className="mt-12 text-xs text-white/20">by Miguel Feldens</p>
+        <p className="mt-12 text-xs text-white/20">vibepath.us · by Miguel Feldens</p>
       </div>
     </div>
   )

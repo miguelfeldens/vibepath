@@ -74,7 +74,7 @@ export const PHASE_CONFIGS: Record<string, Record<Impact, PoolConfig>> = {
     Investigation: { query: 'university campus buildings',  tags: { E: 'Lab',      I: 'Investigation', S: 'Analytical'    } },
   },
 
-  // Branch — lookbook moodboard supplemental
+  // Branch — lookbook moodboard supplemental (set 1: people & purpose)
   branch: {
     Social_Good:   { query: 'community volunteering people',tags: { E: 'Social',   I: 'Social_Good',   S: 'Communicative' } },
     Innovation:    { query: 'technology digital future',    tags: { E: 'Urban',    I: 'Innovation',    S: 'Technical'     } },
@@ -82,10 +82,28 @@ export const PHASE_CONFIGS: Record<string, Record<Impact, PoolConfig>> = {
     Artistic:      { query: 'creative studio design',       tags: { E: 'Workshop', I: 'Artistic',       S: 'Creative'      } },
     Investigation: { query: 'laboratory science research',  tags: { E: 'Lab',      I: 'Investigation', S: 'Analytical'    } },
   },
+
+  // Branch2 — lookbook moodboard supplemental (set 2: success & aspiration)
+  branch2: {
+    Social_Good:   { query: 'nonprofit social impact work', tags: { E: 'Social',   I: 'Social_Good',   S: 'Communicative' } },
+    Innovation:    { query: 'startup entrepreneur office',  tags: { E: 'Urban',    I: 'Innovation',    S: 'Technical'     } },
+    Infrastructure:{ query: 'urban planning city design',   tags: { E: 'Urban',    I: 'Infrastructure',S: 'Physical'      } },
+    Artistic:      { query: 'art exhibition gallery opening',tags: { E: 'Workshop', I: 'Artistic',      S: 'Creative'      } },
+    Investigation: { query: 'data analysis charts science', tags: { E: 'Lab',      I: 'Investigation', S: 'Analytical'    } },
+  },
+
+  // Branch3 — lookbook moodboard supplemental (set 3: place & aesthetic)
+  branch3: {
+    Social_Good:   { query: 'city park neighborhood street',tags: { E: 'Social',   I: 'Social_Good',   S: 'Communicative' } },
+    Innovation:    { query: 'modern tech campus aerial',    tags: { E: 'Urban',    I: 'Innovation',    S: 'Technical'     } },
+    Infrastructure:{ query: 'construction engineering site',tags: { E: 'Remote',   I: 'Infrastructure',S: 'Physical'      } },
+    Artistic:      { query: 'bohemian creative workspace',  tags: { E: 'Workshop', I: 'Artistic',       S: 'Creative'      } },
+    Investigation: { query: 'university campus library',    tags: { E: 'Lab',      I: 'Investigation', S: 'Analytical'    } },
+  },
 }
 
 const IMPACTS: Impact[] = ['Social_Good', 'Innovation', 'Infrastructure', 'Artistic', 'Investigation']
-const PHASES = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'branch'] as const
+const PHASES = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'branch', 'branch2', 'branch3'] as const
 
 // Pool key format: "${phase}_${impact}" e.g. "q1_Artistic"
 export function poolKey(phase: string, impact: Impact): string {

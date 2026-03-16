@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-
 const STEPS = [
   { num: '01', label: 'pick images that hit different' },
   { num: '02', label: 'unlock your Identity Lookbook' },

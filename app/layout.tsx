@@ -12,9 +12,10 @@ const geistSans = Geist({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://vibepath.us'),
   title: 'VibePath — Discover Your Future',
   description:
-    'Stop overthinking your major. Take a 7-question visual gut-check and get your Identity Lookbook.',
+    'Stop overthinking your major. Take a 7-question visual gut-check at vibepath.us and get your Identity Lookbook.',
   icons: {
     icon: '/favicon.svg',
     apple: '/favicon.svg',
@@ -22,7 +23,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'VibePath — Discover Your Future',
     description:
-      'Stop overthinking your major. Take a 7-question visual gut-check and get your Identity Lookbook.',
+      'Stop overthinking your major. Take a 7-question visual gut-check at vibepath.us and get your Identity Lookbook.',
+    url: 'https://vibepath.us',
     images: [{ url: '/og-image.png', width: 1200, height: 630 }],
     type: 'website',
   },
@@ -30,7 +32,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'VibePath — Discover Your Future',
     description:
-      'Stop overthinking your major. Take a 7-question visual gut-check and get your Identity Lookbook.',
+      'Stop overthinking your major. Take a 7-question visual gut-check at vibepath.us and get your Identity Lookbook.',
     images: ['/og-image.png'],
   },
 }

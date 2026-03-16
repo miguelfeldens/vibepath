@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useQuiz } from '@/context/QuizContext'
 import { LookbookHero } from '@/components/lookbook/LookbookHero'
@@ -10,6 +10,9 @@ import { StudentStoriesSection } from '@/components/lookbook/StudentStoriesSecti
 import { JournalBadge } from '@/components/lookbook/JournalBadge'
 import { PrintButton } from '@/components/lookbook/PrintButton'
 import { CollegeFinderSection } from '@/components/lookbook/CollegeFinderSection'
+import { ShareButtons } from '@/components/lookbook/ShareButtons'
+import { PersonaScoreChart } from '@/components/lookbook/PersonaScoreChart'
+import { DeepDiveSection } from '@/components/deepdive/DeepDiveSection'
 import { PERSONAS, computePersona, getMoodboardImages } from '@/lib/personas'
 import { saveSession } from '@/lib/journal'
 import { GA } from '@/lib/analytics'
@@ -17,8 +20,9 @@ import { GA } from '@/lib/analytics'
 export default function LookbookPage() {
   const { state } = useQuiz()
   const router = useRouter()
-
   const { allSelections, tagCounts, poolImages } = state
+  const [ikigai, setIkigai] = useState<{ mission: string; manifesto: string } | null>(null)
+  const [manualPersonaKey, setManualPersonaKey] = useState<import('@/types').Impact | null>(null)
 
   useEffect(() => {
     if (allSelections.length === 0) {
@@ -26,7 +30,7 @@ export default function LookbookPage() {
     }
   }, [allSelections.length, router])
 
-  const personaKey = allSelections.length > 0 ? computePersona(allSelections) : null
+  const personaKey = allSelections.length > 0 ? (manualPersonaKey ?? computePersona(allSelections)) : null
   const persona = personaKey ? PERSONAS[personaKey] : null
   const moodboardImages = personaKey
     ? getMoodboardImages(allSelections, poolImages, personaKey, 12)
@@ -63,9 +67,19 @@ export default function LookbookPage() {
       <LookbookHero persona={persona} isReturning={false} />
       <PowerWordsSection persona={persona} />
       <MoodboardSection images={moodboardImages} />
+      <PersonaScoreChart
+        tagCounts={tagCounts}
+        selectedPersonaKey={personaKey}
+        onSelect={setManualPersonaKey}
+      />
       <StudentStoriesSection persona={persona} />
+      <DeepDiveSection
+        personaKey={personaKey}
+        onComplete={(mission, manifesto) => setIkigai({ mission, manifesto })}
+        onReset={() => setIkigai(null)}
+      />
       <JournalBadge />
-      <CollegeFinderSection personaKey={personaKey} />
+      <CollegeFinderSection personaKey={personaKey} ikigaiMission={ikigai?.mission} />
 
       {/* T&C — print only, renders as last page of PDF */}
       <div className="print-only bg-stone-950 text-white px-12 py-16 min-h-screen">
@@ -97,9 +111,11 @@ export default function LookbookPage() {
 
       {/* Footer CTA */}
       <section className="no-print px-8 py-16 text-center border-t border-white/5 bg-stone-950">
-        <p className="text-sm text-white/30 mb-6">Save or explore more</p>
+        <p className="text-sm text-white/30 mb-6">Save, share or start again</p>
         <div className="flex items-center justify-center gap-4 flex-wrap">
           <PrintButton />
+          {/* Share buttons disabled — links not working, fix later */}
+          {/* <ShareButtons persona={persona} manifesto={ikigai?.manifesto ?? null} /> */}
           <a
             href="/quiz"
             className="inline-block px-6 py-3 rounded-full border border-white/20 text-sm font-medium
@@ -111,8 +127,8 @@ export default function LookbookPage() {
       </section>
 
       {/* Signature */}
-      <div className="px-8 py-6 text-center bg-stone-950 border-t border-white/5">
-        <p className="text-xs text-white/20">by Miguel Feldens</p>
+      <div className="no-print px-8 py-6 text-center bg-stone-950 border-t border-white/5">
+        <p className="text-xs text-white/20">vibepath.us · by Miguel Feldens</p>
       </div>
     </main>
   )

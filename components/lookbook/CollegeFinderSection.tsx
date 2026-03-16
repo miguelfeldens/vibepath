@@ -1,8 +1,9 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { fetchColleges, US_STATES, STATE_NAMES, type CollegeResult, type FitLevel } from '@/lib/college-api'
+import { fetchColleges, US_STATES, STATE_NAMES, PERSONA_PROGRAMS, ALL_PROGRAMS, type CollegeResult, type FitLevel } from '@/lib/college-api'
+import { MISSION_TO_MAJOR } from '@/lib/deepdive'
 import { GA } from '@/lib/analytics'
 import type { Impact } from '@/types'
 
@@ -20,15 +21,32 @@ type Step = 'cta' | 'modal' | 'form' | 'results'
 
 interface Props {
   personaKey: Impact
+  ikigaiMission?: string
 }
 
-export function CollegeFinderSection({ personaKey }: Props) {
+export function CollegeFinderSection({ personaKey, ikigaiMission }: Props) {
+  const programs = PERSONA_PROGRAMS[personaKey]
+  const programEntries = Object.entries(programs) // [suffix, label][]
+  const defaultMajorKey = programEntries[0][0]
+
+  const allProgramsRecord = ALL_PROGRAMS as Record<string, string>
+  const ikigaiMajorKey = ikigaiMission ? MISSION_TO_MAJOR[ikigaiMission] : undefined
+  const ikigaiMajorValid = !!(ikigaiMajorKey && allProgramsRecord[ikigaiMajorKey])
+
   const [step, setStep] = useState<Step>('cta')
   const [states, setStates] = useState<string[]>([])
   const [gpaW, setGpaW] = useState('')
   const [gpaU, setGpaU] = useState('')
   const [sat, setSat] = useState('')
   const [locale, setLocale] = useState<'urban' | 'rural' | 'any'>('any')
+  const [selectedMajorKey, setSelectedMajorKey] = useState<string>(defaultMajorKey)
+
+  // When ikigai mission is set, pre-select the matched major
+  useEffect(() => {
+    if (ikigaiMajorValid && ikigaiMajorKey) {
+      setSelectedMajorKey(ikigaiMajorKey)
+    }
+  }, [ikigaiMajorKey, ikigaiMajorValid])
   const [results, setResults] = useState<CollegeResult[]>([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -44,7 +62,14 @@ export function CollegeFinderSection({ personaKey }: Props) {
     setLoading(true)
     setError(null)
     try {
-      const data = await fetchColleges({ personaKey, states, sat, gpaUnweighted: gpaU, locale })
+      const data = await fetchColleges({
+        personaKey,
+        states,
+        sat,
+        gpaUnweighted: gpaU,
+        locale,
+        majorKey: selectedMajorKey === 'any' ? undefined : selectedMajorKey,
+      })
       setResults(data)
       setStep('results')
       GA.collegeSearch(personaKey, data.length)
@@ -134,6 +159,54 @@ export function CollegeFinderSection({ personaKey }: Props) {
                 Tell us a bit about yourself
               </h2>
               <form onSubmit={handleSubmit} className="space-y-8 max-w-2xl">
+
+                {/* Major selection */}
+                <div>
+                  <label className="block text-sm font-medium text-white/70 mb-3">
+                    Preferred major
+                  </label>
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    {[
+                      { key: 'any', label: 'Any', ikigai: false },
+                      // Ikigai-matched major, if not already in persona defaults
+                      ...(ikigaiMajorValid && ikigaiMajorKey && !programEntries.some(([k]) => k === ikigaiMajorKey)
+                        ? [{ key: ikigaiMajorKey, label: allProgramsRecord[ikigaiMajorKey], ikigai: true }]
+                        : []),
+                      ...programEntries.map(([key, label]) => ({ key, label, ikigai: key === ikigaiMajorKey })),
+                    ].map(({ key, label, ikigai }) => (
+                      <button
+                        key={key}
+                        type="button"
+                        onClick={() => setSelectedMajorKey(key)}
+                        className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-150
+                          ${selectedMajorKey === key
+                            ? 'bg-white text-stone-950'
+                            : 'bg-stone-800 text-white/50 hover:bg-stone-700 hover:text-white/70'
+                          }`}
+                      >
+                        {label}
+                        {ikigai && <span className="ml-1.5 text-[10px] opacity-50">✦ ikigai</span>}
+                      </button>
+                    ))}
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs text-white/30">or pick any field:</span>
+                    <select
+                      value={Object.keys(ALL_PROGRAMS).includes(selectedMajorKey) && !programEntries.some(([k]) => k === selectedMajorKey) ? selectedMajorKey : ''}
+                      onChange={(e) => { if (e.target.value) setSelectedMajorKey(e.target.value) }}
+                      className="bg-stone-800 border border-white/10 text-white/60 text-xs rounded-lg px-3 py-1.5
+                        focus:outline-none focus:border-white/30 cursor-pointer"
+                    >
+                      <option value="">— browse all majors —</option>
+                      {Object.entries(ALL_PROGRAMS)
+                        .sort(([, a], [, b]) => a.localeCompare(b))
+                        .map(([key, label]) => (
+                          <option key={key} value={key}>{label}</option>
+                        ))
+                      }
+                    </select>
+                  </div>
+                </div>
 
                 {/* State selection */}
                 <div>

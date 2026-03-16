@@ -24,7 +24,7 @@ export const STATE_NAMES: Record<string, string> = {
 // Maps persona → { API field suffix → readable label }
 // Field format: latest.academics.program.bachelors.{suffix}
 // Values are 0 or 1 (whether school offers bachelor's in that area)
-const PERSONA_PROGRAMS: Record<Impact, Record<string, string>> = {
+export const PERSONA_PROGRAMS: Record<Impact, Record<string, string>> = {
   Social_Good: {
     public_administration_social_service: 'Social Work / Public Policy',
     social_science: 'Sociology / Social Sciences',
@@ -58,6 +58,43 @@ const PERSONA_PROGRAMS: Record<Impact, Record<string, string>> = {
   },
 }
 
+// All bachelor's program fields available in the College Scorecard API
+export const ALL_PROGRAMS: Record<string, string> = {
+  agriculture: 'Agriculture & Natural Resources',
+  architecture: 'Architecture & Design',
+  biological: 'Biology & Life Sciences',
+  business_marketing: 'Business & Marketing',
+  communication: 'Communications & Journalism',
+  computer: 'Computer Science & IT',
+  education: 'Education',
+  engineering: 'Engineering',
+  english: 'English & Creative Writing',
+  ethnic_cultural_gender: 'Ethnic, Cultural & Gender Studies',
+  health: 'Health & Public Health',
+  history: 'History',
+  humanities: 'Humanities',
+  language: 'Foreign Languages & Linguistics',
+  legal: 'Legal Studies / Pre-Law',
+  library: 'Library Science',
+  mathematics: 'Mathematics & Statistics',
+  mechanic_repair_technology: 'Mechanics & Repair Technology',
+  military: 'Military Sciences',
+  multidiscipline: 'Interdisciplinary Studies',
+  parks_recreation_fitness: 'Parks, Recreation & Fitness',
+  philosophy_religious: 'Philosophy & Religious Studies',
+  physical_science: 'Physical Sciences (Chemistry, Physics)',
+  precision_production: 'Precision Production',
+  psychology: 'Psychology',
+  public_administration_social_service: 'Public Administration & Social Work',
+  resources: 'Natural Resources & Conservation',
+  science_technology: 'Science Technology',
+  security_law_enforcement: 'Criminal Justice & Security',
+  social_science: 'Social Sciences (Sociology, Anthropology)',
+  theology_religious_vocation: 'Theology & Religious Studies',
+  transportation: 'Transportation & Logistics',
+  visual_performing: 'Visual & Performing Arts',
+}
+
 const BASE_FIELDS = [
   'id',
   'school.name',
@@ -65,12 +102,21 @@ const BASE_FIELDS = [
   'school.school_url',
   'school.locale',
   'school.ownership',
+  'school.hbcu',
+  'school.women_only',
+  'school.men_only',
+  'school.religious_affiliation',
   'latest.student.size',
   'latest.admissions.sat_scores.25th_percentile.critical_reading',
   'latest.admissions.sat_scores.25th_percentile.mathematics',
   'latest.admissions.sat_scores.75th_percentile.critical_reading',
   'latest.admissions.sat_scores.75th_percentile.mathematics',
   'latest.admissions.admission_rate.overall',
+  'latest.student.retention_rate.four_year.full_time',
+  'latest.completion.completion_rate_4yr_150nt',
+  'latest.cost.avg_net_price.public',
+  'latest.cost.avg_net_price.private',
+  'latest.aid.pell_grant_rate',
 ]
 
 export type FitLevel = 'ultra-reach' | 'reach' | 'target' | 'safety' | 'unknown'
@@ -94,6 +140,7 @@ export interface FetchCollegesParams {
   sat: string
   gpaUnweighted: string
   locale: 'urban' | 'rural' | 'any'
+  majorKey?: string  // if set, filter to this specific program only
 }
 
 function computeFitLevel(
@@ -158,18 +205,53 @@ function generateVibe(raw: any): string {
     else selectivity = 'accessible admissions'
   }
 
+  // Identity badges
+  const identityParts: string[] = []
+  if (raw['school.hbcu'] === 1) identityParts.push('HBCU')
+  if (raw['school.women_only'] === 1) identityParts.push("women's college")
+  if (raw['school.men_only'] === 1) identityParts.push("men's college")
+  if (raw['school.religious_affiliation'] && raw['school.religious_affiliation'] !== 0) identityParts.push('faith-based')
+
+  // Retention & graduation
+  const retention: number | null = raw['latest.student.retention_rate.four_year.full_time'] ?? null
+  const retentionLabel = retention != null ? `${Math.round(retention * 100)}% return rate` : null
+
+  const gradRate: number | null = raw['latest.completion.completion_rate_4yr_150nt'] ?? null
+  const gradLabel = gradRate != null ? `${Math.round(gradRate * 100)}% grad rate` : null
+
+  // Cost (whichever field is populated)
+  const netPublic: number | null = raw['latest.cost.avg_net_price.public'] ?? null
+  const netPrivate: number | null = raw['latest.cost.avg_net_price.private'] ?? null
+  const netPrice = netPublic ?? netPrivate
+  const netPriceLabel = netPrice != null
+    ? `~$${Math.round(netPrice / 1000)}k avg net price`
+    : null
+
+  // Aid accessibility
+  const pellRate: number | null = raw['latest.aid.pell_grant_rate'] ?? null
+  let pellLabel: string | null = null
+  if (pellRate != null) {
+    if (pellRate >= 0.40) pellLabel = 'high aid availability'
+    else if (pellRate >= 0.25) pellLabel = 'moderate aid'
+  }
+
   const parts: string[] = []
   if (sizeLabel && ownershipLabel) parts.push(`${sizeLabel} ${ownershipLabel}`)
   else if (sizeLabel) parts.push(sizeLabel)
   else if (ownershipLabel) parts.push(ownershipLabel)
   if (localeLabel) parts.push(localeLabel)
   if (selectivity) parts.push(selectivity)
+  parts.push(...identityParts)
+  if (retentionLabel) parts.push(retentionLabel)
+  if (gradLabel) parts.push(gradLabel)
+  if (netPriceLabel) parts.push(netPriceLabel)
+  if (pellLabel) parts.push(pellLabel)
 
-  return parts.join(' · ').slice(0, 200)
+  return parts.join(' · ').slice(0, 300)
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-function parseSchool(raw: any, personaKey: Impact, userSat: number | null, gpa: number | null): CollegeResult {
+function parseSchool(raw: any, personaKey: Impact, userSat: number | null, gpa: number | null, activeProgramKeys: string[]): CollegeResult {
   const sat25r = raw['latest.admissions.sat_scores.25th_percentile.critical_reading'] ?? null
   const sat25m = raw['latest.admissions.sat_scores.25th_percentile.mathematics'] ?? null
   const sat75r = raw['latest.admissions.sat_scores.75th_percentile.critical_reading'] ?? null
@@ -179,11 +261,11 @@ function parseSchool(raw: any, personaKey: Impact, userSat: number | null, gpa: 
   const admissionRate = raw['latest.admissions.admission_rate.overall'] ?? null
   const url: string = raw['school.school_url'] ?? ''
 
-  // Detect which programs this school actually offers
-  const programs = PERSONA_PROGRAMS[personaKey]
-  const matchingMajors = Object.entries(programs)
-    .filter(([suffix]) => raw[`latest.academics.program.bachelors.${suffix}`] === 1)
-    .map(([, label]) => label)
+  // Detect which programs this school actually offers (scoped to active keys)
+  const personaPrograms = PERSONA_PROGRAMS[personaKey]
+  const matchingMajors = activeProgramKeys
+    .filter((suffix) => raw[`latest.academics.program.bachelors.${suffix}`] === 1)
+    .map((suffix) => personaPrograms[suffix] ?? ALL_PROGRAMS[suffix] ?? suffix)
 
   return {
     id: raw.id,
@@ -207,7 +289,11 @@ export async function fetchColleges(params: FetchCollegesParams): Promise<Colleg
   const gpa = params.gpaUnweighted ? parseFloat(params.gpaUnweighted) : null
 
   const programs = PERSONA_PROGRAMS[params.personaKey]
-  const programFields = Object.keys(programs).map(
+  // If a specific major is selected, only request/filter by that field
+  const activeProgramKeys = params.majorKey
+    ? [params.majorKey]
+    : Object.keys(programs)
+  const programFields = activeProgramKeys.map(
     (suffix) => `latest.academics.program.bachelors.${suffix}`
   )
   const fields = [...BASE_FIELDS, ...programFields].join(',')
@@ -236,7 +322,7 @@ export async function fetchColleges(params: FetchCollegesParams): Promise<Colleg
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const all: CollegeResult[] = (json.results ?? []).map((raw: any) =>
-    parseSchool(raw, params.personaKey, userSat, gpa)
+    parseSchool(raw, params.personaKey, userSat, gpa, activeProgramKeys)
   )
 
   // Keep only schools that offer at least one relevant program

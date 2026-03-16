@@ -22,4 +22,12 @@ export const GA = {
   /** Fired when user clicks the donation / BMAC link */
   donationClick: () =>
     track('donation_click'),
+
+  /** Fired when user advances to each Deep Dive step */
+  deepDiveStep: (step: 'stack' | 'mission' | 'hypothesis') =>
+    track('deep_dive_step', { step }),
+
+  /** Fired when the Life Hypothesis manifesto is displayed (Deep Dive complete) */
+  deepDiveComplete: (personaKey: string) =>
+    track('deep_dive_complete', { persona: personaKey }),
 }
