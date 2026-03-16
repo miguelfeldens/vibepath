@@ -27,7 +27,7 @@ export function PowerWordsSection({ persona }: PowerWordsSectionProps) {
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: i * 0.15, duration: 0.6, ease: 'easeOut' }}
+            transition={{ delay: i * 0.15, duration: 0.6, ease: 'easeOut' as const }}
             className="flex items-baseline gap-4"
           >
             <span className="text-xs text-white/20 w-4 font-mono">{String(i + 1).padStart(2, '0')}</span>
@@ -46,7 +46,7 @@ export function PowerWordsSection({ persona }: PowerWordsSectionProps) {
         initial={{ scaleX: 0 }}
         whileInView={{ scaleX: 1 }}
         viewport={{ once: true }}
-        transition={{ delay: 0.6, duration: 0.8, ease: 'easeOut' }}
+        transition={{ delay: 0.6, duration: 0.8, ease: 'easeOut' as const }}
         className="mt-12 h-px origin-left"
         style={{ backgroundColor: persona.accentColor, opacity: 0.4 }}
       />

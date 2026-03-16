@@ -9,7 +9,7 @@ interface Props {
   accentColor: string
 }
 
-const T = { duration: 0.9, ease: 'easeOut' }
+const T = { duration: 0.9, ease: 'easeOut' as const }
 
 export function IkigaiVenn({ passionDone, missionDone, vocationDone, accentColor }: Props) {
   const professionDone = passionDone && missionDone && vocationDone
@@ -150,7 +150,7 @@ export function IkigaiVenn({ passionDone, missionDone, vocationDone, accentColor
           cx={cx} cy={cy} r={18}
           fill={accentColor}
           animate={{ opacity: allDone ? 0.95 : 0.07, filter: allDone ? 'url(#dd-center-glow)' : 'none' }}
-          transition={{ duration: 1.2, ease: 'easeOut' }}
+          transition={{ duration: 1.2, ease: 'easeOut' as const }}
         />
 
         {/* Center text */}
