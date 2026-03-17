@@ -71,7 +71,7 @@ export function buildQuestionImages(
   const dominant = branchPool ?? IMPACTS[0]
   const others = shuffle(IMPACTS.filter((i) => i !== dominant))
 
-  const dominantPicks = pickUnused(allImages[poolKey(phase, dominant)] ?? [], usedIds, 3)
+  const dominantPicks = pickUnused(allImages[poolKey(phase, dominant)] ?? [], usedIds, 2)
   addUsed(dominantPicks)
 
   const need = 5 - dominantPicks.length

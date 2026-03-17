@@ -92,7 +92,7 @@ export function DeepDiveSection({ personaKey, onComplete, onReset }: Props) {
               >
                 <div className="space-y-3">
                   <p className="text-xs tracking-[0.3em] uppercase text-white/30 font-medium">
-                    level 2
+                    deep dive
                   </p>
                   <h3
                     className="text-3xl sm:text-4xl font-semibold text-white leading-tight"
@@ -121,7 +121,7 @@ export function DeepDiveSection({ personaKey, onComplete, onReset }: Props) {
                   className="px-6 py-3 rounded-full text-sm font-semibold tracking-wide text-black transition-all duration-200"
                   style={{ backgroundColor: accentColor }}
                 >
-                  Level Up →
+                  find my why →
                 </motion.button>
               </div>
             </motion.div>
