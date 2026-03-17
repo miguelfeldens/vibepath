@@ -102,6 +102,7 @@ const BASE_FIELDS = [
   'school.school_url',
   'school.locale',
   'school.ownership',
+  'school.degrees_awarded.highest',
   'school.hbcu',
   'school.women_only',
   'school.men_only',
@@ -129,6 +130,9 @@ export interface CollegeResult {
   admissionRate: number | null
   sat25: number | null
   sat75: number | null
+  netPrice: number | null
+  pellRate: number | null
+  isCommunity: boolean
   matchingMajors: string[]
   fitLevel: FitLevel
   vibe: string
@@ -136,11 +140,14 @@ export interface CollegeResult {
 
 export interface FetchCollegesParams {
   personaKey: Impact
-  states: string[]
+  state: string | null
   sat: string
   gpaUnweighted: string
   locale: 'urban' | 'rural' | 'any'
   majorKey?: string  // if set, filter to this specific program only
+  institutionType: 'public' | 'private' | 'community' | 'any'
+  maxCost: number | null
+  highAid: boolean
 }
 
 function computeFitLevel(
@@ -267,6 +274,12 @@ function parseSchool(raw: any, personaKey: Impact, userSat: number | null, gpa: 
     .filter((suffix) => raw[`latest.academics.program.bachelors.${suffix}`] === 1)
     .map((suffix) => personaPrograms[suffix] ?? ALL_PROGRAMS[suffix] ?? suffix)
 
+  const netPublic: number | null = raw['latest.cost.avg_net_price.public'] ?? null
+  const netPrivate: number | null = raw['latest.cost.avg_net_price.private'] ?? null
+  const netPrice = netPublic ?? netPrivate
+  const pellRate: number | null = raw['latest.aid.pell_grant_rate'] ?? null
+  const isCommunity = raw['school.degrees_awarded.highest'] === 2
+
   return {
     id: raw.id,
     name: raw['school.name'] ?? 'Unknown',
@@ -275,6 +288,9 @@ function parseSchool(raw: any, personaKey: Impact, userSat: number | null, gpa: 
     admissionRate,
     sat25,
     sat75,
+    netPrice,
+    pellRate,
+    isCommunity,
     matchingMajors,
     fitLevel: computeFitLevel(admissionRate, sat25, sat75, userSat, gpa),
     vibe: generateVibe(raw),
@@ -301,17 +317,24 @@ export async function fetchColleges(params: FetchCollegesParams): Promise<Colleg
   const query = new URLSearchParams({
     api_key: key,
     fields,
-    per_page: '100', // fetch more so filtering still yields ~25
+    per_page: '200', // fetch more so filtering still yields ~50
   })
 
-  if (params.states.length > 0) {
-    query.set('school.state', params.states.join(','))
+  if (params.state) {
+    query.set('school.state', params.state)
   }
   if (params.locale === 'urban') {
     query.set('school.locale', '11,12,13')
   } else if (params.locale === 'rural') {
     query.set('school.locale', '21,22,23,31,32,33,41,42,43')
   }
+  // Filter by institution type via API where possible
+  if (params.institutionType === 'public') {
+    query.set('school.ownership', '1')
+  } else if (params.institutionType === 'private') {
+    query.set('school.ownership', '2,3')
+  }
+  // Community colleges are filtered client-side via school.degrees_awarded.highest === 2
 
   const res = await fetch(
     `https://api.data.gov/ed/collegescorecard/v1/schools?${query.toString()}`
@@ -326,11 +349,26 @@ export async function fetchColleges(params: FetchCollegesParams): Promise<Colleg
   )
 
   // Keep only schools that offer at least one relevant program
-  const filtered = all.filter((r) => r.matchingMajors.length > 0)
+  let filtered = all.filter((r) => r.matchingMajors.length > 0)
+
+  // Community college filter (client-side — highest degree = Associate's)
+  if (params.institutionType === 'community') {
+    filtered = filtered.filter((r) => r.isCommunity)
+  }
+
+  // Cost filter (client-side)
+  if (params.maxCost !== null) {
+    filtered = filtered.filter((r) => r.netPrice !== null && r.netPrice <= params.maxCost!)
+  }
+
+  // High aid filter (client-side — Pell grant rate ≥ 40%)
+  if (params.highAid) {
+    filtered = filtered.filter((r) => r.pellRate !== null && r.pellRate >= 0.40)
+  }
 
   // Sort: ultra-reach → reach → target → safety → unknown
   const order: FitLevel[] = ['ultra-reach', 'reach', 'target', 'safety', 'unknown']
   return filtered
     .sort((a, b) => order.indexOf(a.fitLevel) - order.indexOf(b.fitLevel))
-    .slice(0, 25)
+    .slice(0, 50)
 }

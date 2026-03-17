@@ -78,7 +78,9 @@ export default function LookbookPage() {
         onComplete={(mission, manifesto) => setIkigai({ mission, manifesto })}
         onReset={() => setIkigai(null)}
       />
-      <JournalBadge />
+      <div className="no-print">
+        <JournalBadge />
+      </div>
       <CollegeFinderSection personaKey={personaKey} ikigaiMission={ikigai?.mission} />
 
       {/* T&C — print only, renders as last page of PDF */}
@@ -106,7 +108,7 @@ export default function LookbookPage() {
             <p className="text-sm text-white/60 leading-relaxed">VibePath is an independent tool built for exploration and self-reflection. It is not affiliated with any college, university, government agency, or professional counseling body.</p>
           </div>
         </div>
-        <p className="mt-16 text-xs text-white/20">vibepath.app · {new Date().getFullYear()} · by Miguel Feldens</p>
+        <p className="mt-16 text-xs text-white/20">vibepath.us · {new Date().getFullYear()} · by Miguel Feldens</p>
       </div>
 
       {/* Footer CTA */}
@@ -114,8 +116,7 @@ export default function LookbookPage() {
         <p className="text-sm text-white/30 mb-6">Save, share or start again</p>
         <div className="flex items-center justify-center gap-4 flex-wrap">
           <PrintButton />
-          {/* Share buttons disabled — links not working, fix later */}
-          {/* <ShareButtons persona={persona} manifesto={ikigai?.manifesto ?? null} /> */}
+          <ShareButtons persona={persona} manifesto={ikigai?.manifesto ?? null} />
           <a
             href="/quiz"
             className="inline-block px-6 py-3 rounded-full border border-white/20 text-sm font-medium

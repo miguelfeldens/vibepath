@@ -80,6 +80,14 @@ body {
     display: none !important;
   }
 
+  /* Reset Framer Motion inline styles so animated elements are visible */
+  * {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
   /* Let sections flow naturally for print */
   html,
   body {

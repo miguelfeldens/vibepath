@@ -34,12 +34,15 @@ export function CollegeFinderSection({ personaKey, ikigaiMission }: Props) {
   const ikigaiMajorValid = !!(ikigaiMajorKey && allProgramsRecord[ikigaiMajorKey])
 
   const [step, setStep] = useState<Step>('cta')
-  const [states, setStates] = useState<string[]>([])
+  const [state, setState] = useState<string | null>(null)
   const [gpaW, setGpaW] = useState('')
   const [gpaU, setGpaU] = useState('')
   const [sat, setSat] = useState('')
   const [locale, setLocale] = useState<'urban' | 'rural' | 'any'>('any')
   const [selectedMajorKey, setSelectedMajorKey] = useState<string>(defaultMajorKey)
+  const [institutionType, setInstitutionType] = useState<'public' | 'private' | 'community' | 'any'>('any')
+  const [maxCost, setMaxCost] = useState<number | null>(null)
+  const [highAid, setHighAid] = useState(false)
 
   // When ikigai mission is set, pre-select the matched major
   useEffect(() => {
@@ -52,9 +55,7 @@ export function CollegeFinderSection({ personaKey, ikigaiMission }: Props) {
   const [error, setError] = useState<string | null>(null)
 
   function toggleState(s: string) {
-    setStates((prev) =>
-      prev.includes(s) ? prev.filter((x) => x !== s) : prev.length < 3 ? [...prev, s] : prev
-    )
+    setState((prev) => (prev === s ? null : s))
   }
 
   async function handleSubmit(e: React.FormEvent) {
@@ -64,11 +65,14 @@ export function CollegeFinderSection({ personaKey, ikigaiMission }: Props) {
     try {
       const data = await fetchColleges({
         personaKey,
-        states,
+        state,
         sat,
         gpaUnweighted: gpaU,
         locale,
         majorKey: selectedMajorKey === 'any' ? undefined : selectedMajorKey,
+        institutionType,
+        maxCost,
+        highAid,
       })
       setResults(data)
       setStep('results')
@@ -211,7 +215,7 @@ export function CollegeFinderSection({ personaKey, ikigaiMission }: Props) {
                 {/* State selection */}
                 <div>
                   <label className="block text-sm font-medium text-white/70 mb-3">
-                    Preferred states <span className="text-white/30 font-normal">(pick up to 3)</span>
+                    Preferred state <span className="text-white/30 font-normal">(optional)</span>
                   </label>
                   <div className="flex flex-wrap gap-2">
                     {US_STATES.map((s) => (
@@ -220,18 +224,89 @@ export function CollegeFinderSection({ personaKey, ikigaiMission }: Props) {
                         type="button"
                         onClick={() => toggleState(s)}
                         className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-150
-                          ${states.includes(s)
+                          ${state === s
                             ? 'bg-white text-stone-950'
                             : 'bg-stone-800 text-white/50 hover:bg-stone-700 hover:text-white/70'
-                          }
-                          ${!states.includes(s) && states.length >= 3 ? 'opacity-30 cursor-not-allowed' : ''}
-                        `}
+                          }`}
                         title={STATE_NAMES[s]}
                       >
                         {s}
                       </button>
                     ))}
                   </div>
+                </div>
+
+                {/* Institution type */}
+                <div>
+                  <label className="block text-sm font-medium text-white/70 mb-3">Institution type</label>
+                  <div className="flex flex-wrap gap-2">
+                    {([
+                      { value: 'any', label: 'Any' },
+                      { value: 'public', label: 'Public' },
+                      { value: 'private', label: 'Private' },
+                      { value: 'community', label: 'Community College' },
+                    ] as const).map(({ value, label }) => (
+                      <button
+                        key={value}
+                        type="button"
+                        onClick={() => setInstitutionType(value)}
+                        className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-150
+                          ${institutionType === value
+                            ? 'bg-white text-stone-950'
+                            : 'bg-stone-800 text-white/50 hover:bg-stone-700 hover:text-white/70'
+                          }`}
+                      >
+                        {label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Cost range */}
+                <div>
+                  <label className="block text-sm font-medium text-white/70 mb-3">
+                    Max net price / year <span className="text-white/30 font-normal">(avg after aid)</span>
+                  </label>
+                  <div className="flex flex-wrap gap-2">
+                    {([
+                      { value: null, label: 'Any' },
+                      { value: 15000, label: 'Under $15k' },
+                      { value: 30000, label: 'Under $30k' },
+                      { value: 50000, label: 'Under $50k' },
+                    ] as const).map(({ value, label }) => (
+                      <button
+                        key={label}
+                        type="button"
+                        onClick={() => setMaxCost(value)}
+                        className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-150
+                          ${maxCost === value
+                            ? 'bg-white text-stone-950'
+                            : 'bg-stone-800 text-white/50 hover:bg-stone-700 hover:text-white/70'
+                          }`}
+                      >
+                        {label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* High aid toggle */}
+                <div className="flex items-center gap-3">
+                  <button
+                    type="button"
+                    onClick={() => setHighAid((v) => !v)}
+                    className={`w-10 h-6 rounded-full transition-colors duration-200 relative shrink-0
+                      ${highAid ? 'bg-white' : 'bg-stone-700'}`}
+                  >
+                    <span
+                      className={`absolute top-1 w-4 h-4 rounded-full bg-stone-950 transition-all duration-200
+                        ${highAid ? 'left-5' : 'left-1'}`}
+                    />
+                  </button>
+                  <span className="text-sm text-white/70">
+                    High aid availability
+                    <span className="ml-2 text-white/30 font-normal text-xs">(≥40% of students receive Pell grants)</span>
+                  </span>
                 </div>
 
                 {/* GPA */}
@@ -352,7 +427,7 @@ export function CollegeFinderSection({ personaKey, ikigaiMission }: Props) {
 
               {results.length === 0 ? (
                 <p className="text-sm text-white/40">
-                  No colleges matched your filters. Try selecting more states or removing the campus setting filter.
+                  No colleges matched your filters. Try a different state, institution type, or cost range.
                 </p>
               ) : (
                 <div className="overflow-x-auto rounded-xl border border-white/10">

@@ -8,22 +8,44 @@ interface Props {
   manifesto: string | null
 }
 
+function stripMd(text: string) {
+  return text.replace(/\*/g, '')
+}
+
 export function ShareButtons({ persona, manifesto }: Props) {
   const [copied, setCopied] = useState(false)
 
   const baseText = manifesto
-    ? `"${manifesto}"`
-    : `I'm a ${persona.title} — ${persona.description}`
+    ? `"${stripMd(manifesto)}"`
+    : `${persona.title} — ${stripMd(persona.description)}`
 
-  const shareText = `My VibePath result 🎯\n\n${baseText}\n\nDiscover yours → vibepath.us`
+  const shareText = `My VibePath result\n\n${baseText}\n\nDiscover yours → vibepath.us`
+  const whatsappText = `My VibePath result 🎯\n\n${baseText}\n\nDiscover yours → vibepath.us`
   const emailSubject = `My VibePath — ${persona.title}`
-  const emailBody = `${baseText}\n\nDiscover your own path at vibepath.us`
+  const emailBody = `${baseText.slice(0, 500)}\n\nDiscover your path at vibepath.us`
 
   function handleCopy() {
-    navigator.clipboard.writeText(shareText).then(() => {
+    const tryExecCommand = () => {
+      const ta = document.createElement('textarea')
+      ta.value = shareText
+      ta.style.position = 'fixed'
+      ta.style.opacity = '0'
+      document.body.appendChild(ta)
+      ta.select()
+      document.execCommand('copy')
+      document.body.removeChild(ta)
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
-    })
+    }
+
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(shareText).then(() => {
+        setCopied(true)
+        setTimeout(() => setCopied(false), 2000)
+      }).catch(tryExecCommand)
+    } else {
+      tryExecCommand()
+    }
   }
 
   return (
@@ -43,7 +65,7 @@ export function ShareButtons({ persona, manifesto }: Props) {
 
       {/* WhatsApp */}
       <a
-        href={`https://wa.me/?text=${encodeURIComponent(shareText)}`}
+        href={`https://wa.me/?text=${encodeURIComponent(whatsappText)}`}
         target="_blank"
         rel="noopener noreferrer"
         title="Share on WhatsApp"
@@ -75,7 +97,7 @@ export function ShareButtons({ persona, manifesto }: Props) {
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
             </svg>
-            Copy link
+            Copy
           </>
         )}
       </button>

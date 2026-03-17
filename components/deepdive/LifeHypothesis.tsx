@@ -37,6 +37,9 @@ export function LifeHypothesis({
         accentColor={accentColor}
       />
 
+      {/* Page break between Venn and Life Hypothesis in print */}
+      <div className="print-page-break" />
+
       {/* Manifesto card */}
       <div
         className="rounded-2xl p-6 sm:p-8 border"
